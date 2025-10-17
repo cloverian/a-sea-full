@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dae3gh4jw6a4a"]
+[gd_scene load_steps=6 format=3 uid="uid://dae3gh4jw6a4a"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hrmi8"]
 bg_color = Color(0, 0.9843137, 0, 0.15686275)
@@ -10,6 +10,9 @@ bg_color = Color(0, 0, 0, 1)
 size = Vector2(2560, 63)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xfga"]
+size = Vector2(384, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_paxxb"]
 size = Vector2(384, 48)
 
 [node name="Map" type="Node2D"]
@@ -56,4 +59,4 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_4xfga")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle2"]
 position = Vector2(1080, 240)
-shape = SubResource("RectangleShape2D_4xfga")
+shape = SubResource("RectangleShape2D_paxxb")
