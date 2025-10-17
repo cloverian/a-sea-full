@@ -44,3 +44,16 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_4xfga")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle"]
 position = Vector2(704, 328)
 shape = SubResource("RectangleShape2D_4xfga")
+
+[node name="Obstacle" type="StaticBody2D" parent="Obstacle"]
+
+[node name="Panel2" type="Panel" parent="Obstacle/Obstacle"]
+offset_left = 635.0
+offset_top = 137.0
+offset_right = 1019.0
+offset_bottom = 185.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4xfga")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle/Obstacle"]
+position = Vector2(827, 161)
+shape = SubResource("RectangleShape2D_4xfga")
