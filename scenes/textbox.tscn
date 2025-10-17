@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://57bprodgojhi"]
+
+[ext_resource type="FontFile" uid="uid://b1n3v6rd8mni1" path="res://assets/fonts/determination-mono.ttf" id="1_nyk3b"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nsew3"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+
+[node name="Textbox" type="Panel"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -289.0
+offset_top = -183.0
+offset_right = 289.0
+offset_bottom = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nsew3")
+
+[node name="Text" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 27.0
+offset_right = 545.0
+offset_bottom = 123.0
+theme_override_fonts/normal_font = ExtResource("1_nyk3b")
+theme_override_font_sizes/normal_font_size = 36
+bbcode_enabled = true
+text = "* This is a [rainbow]textbox[/rainbow]. It's
+  useless in the [color=green]editor[/color]
+  though..."
