@@ -26,10 +26,3 @@ sprite_frames = SubResource("SpriteFrames_onrkg")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_i3pqv")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(4, 2)
-limit_smoothed = true
-position_smoothing_enabled = true
-position_smoothing_speed = 10.0
-rotation_smoothing_enabled = true

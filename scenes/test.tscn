@@ -1,9 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://c5nftd4b3oqqj"]
+[gd_scene load_steps=4 format=3 uid="uid://c5nftd4b3oqqj"]
 
 [ext_resource type="PackedScene" uid="uid://dae3gh4jw6a4a" path="res://scenes/map.tscn" id="1_bl13t"]
+[ext_resource type="Script" uid="uid://b3732bylp7uyu" path="res://scripts/world_camera.gd" id="1_iyx0m"]
 [ext_resource type="PackedScene" uid="uid://dqco260pm24ey" path="res://scenes/player.tscn" id="2_iyx0m"]
 
 [node name="test" type="Node2D"]
+
+[node name="World Camera" type="Camera2D" parent="."]
+limit_left = 0
+limit_top = 0
+limit_right = 2560
+limit_bottom = 960
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+script = ExtResource("1_iyx0m")
 
 [node name="Player" parent="." instance=ExtResource("2_iyx0m")]
 position = Vector2(320, 240)
