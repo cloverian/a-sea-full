@@ -5,6 +5,12 @@ const JUMP_VELOCITY : float = -300.0
 const GRAVITY : Vector2 = Vector2(0.0, 981.0)
 var jumps : int = 0
 
+func _input(_event) -> void:
+	if Input.is_action_just_pressed("E"):
+		Global.startDialogue([
+			"* This is a textbox."
+		])
+
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += GRAVITY * delta

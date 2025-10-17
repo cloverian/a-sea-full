@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://57bprodgojhi"]
+[gd_scene load_steps=4 format=3 uid="uid://57bprodgojhi"]
 
+[ext_resource type="Script" uid="uid://0b43mfun36ei" path="res://scripts/textbox.gd" id="1_3xmdk"]
 [ext_resource type="FontFile" uid="uid://b1n3v6rd8mni1" path="res://assets/fonts/determination-mono.ttf" id="1_nyk3b"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nsew3"]
@@ -22,6 +23,7 @@ offset_bottom = -31.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_nsew3")
+script = ExtResource("1_3xmdk")
 
 [node name="Text" type="RichTextLabel" parent="."]
 layout_mode = 0
