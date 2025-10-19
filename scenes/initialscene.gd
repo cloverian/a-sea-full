@@ -13,8 +13,11 @@ func _ready() -> void:
 	else: stage = 0
 	
 func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("E"):
+		get_tree().change_scene_to_file("res://scenes/test.tscn")
 	match stage:
 		0: gameByToLearnEnglish()
+		1: get_tree().change_scene_to_file("res://scenes/test.tscn")
 		
 func gameByToLearnEnglish() -> void:
 	await Global.wait(1.0)

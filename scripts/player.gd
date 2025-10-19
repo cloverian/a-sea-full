@@ -24,7 +24,7 @@ func _physics_process(delta: float) -> void:
 			jumps = 2
 			velocity.y = JUMP_VELOCITY * 1.2
 	if Input.is_action_just_pressed("S"):
-		velocity.y = -JUMP_VELOCITY * 2
+		velocity.y = -JUMP_VELOCITY * 7
 			
 	var direction := Input.get_axis("A", "D")
 	if direction == -1: $Sprite.flip_h = true
