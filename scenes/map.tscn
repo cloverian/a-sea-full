@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dae3gh4jw6a4a"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hrmi8"]
-bg_color = Color(0, 0.9843137, 0, 0.039215688)
+bg_color = Color(2.695322e-06, 0.7510427, 0.9769704, 0.19607843)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4xfga"]
 bg_color = Color(1, 1, 1, 1)
@@ -58,5 +58,19 @@ offset_bottom = 264.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_4xfga")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle2"]
+position = Vector2(1080, 240)
+shape = SubResource("RectangleShape2D_paxxb")
+
+[node name="Obstacle3" type="StaticBody2D" parent="."]
+position = Vector2(-480, -78)
+
+[node name="Panel2" type="Panel" parent="Obstacle3"]
+offset_left = 888.0
+offset_top = 216.0
+offset_right = 1272.0
+offset_bottom = 264.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4xfga")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle3"]
 position = Vector2(1080, 240)
 shape = SubResource("RectangleShape2D_paxxb")

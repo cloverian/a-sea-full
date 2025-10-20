@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cx2k3h0uoucyy"]
 
-[ext_resource type="Script" uid="uid://bnsddebg7whtr" path="res://scenes/initialscene.gd" id="1_1tdla"]
+[ext_resource type="Script" uid="uid://bnsddebg7whtr" path="res://scripts/initialscene.gd" id="1_1tdla"]
 [ext_resource type="FontFile" uid="uid://b1n3v6rd8mni1" path="res://assets/fonts/determination-mono.ttf" id="1_4hqih"]
 [ext_resource type="Texture2D" uid="uid://dkxg4m51nxc7k" path="res://assets/galaxy.png" id="2_1tdla"]
 
