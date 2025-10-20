@@ -11,7 +11,8 @@ config_version=5
 [application]
 
 config/name="A Sea-Full"
-config/description="A HKS-style game for learning English :)"
+config/description="A Hollow Knight: Silksong style game (with some Undertale / Deltarune aspects) to learn English! :)"
+config/version="v0.1.0-demo"
 run/main_scene="uid://cx2k3h0uoucyy"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 boot_splash/show_image=false
