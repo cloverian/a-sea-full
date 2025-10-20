@@ -28,3 +28,12 @@ sprite_frames = SubResource("SpriteFrames_onrkg")
 visible = false
 position = Vector2(-6, 18)
 shape = SubResource("RectangleShape2D_i3pqv")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -43.0
+offset_top = -97.0
+offset_right = 42.0
+offset_bottom = -52.0
+theme_override_font_sizes/font_size = 32
+text = "0.0"
+horizontal_alignment = 1

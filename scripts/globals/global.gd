@@ -36,3 +36,6 @@ func tween(object: Object, property: NodePath, final_val, duration: float, trans
 		get_tree().create_tween().tween_property(object, property, final_val, duration)
 	else:
 		get_tree().create_tween().tween_property(object, property, final_val, duration).set_trans(transition)
+
+func isNegative(number) -> bool:
+	return abs(number) / number

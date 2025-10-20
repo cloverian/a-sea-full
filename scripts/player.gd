@@ -1,15 +1,13 @@
 extends CharacterBody2D
 
-const SPEED : float = 210.0
+const MAXSPEED : float = 210.0
+const ACCELERATION : float = 20.0
 const JUMP_VELOCITY : float = -300.0
 const GRAVITY : Vector2 = Vector2(0.0, 981.0)
 var jumps : int = 0
 
-func _input(_event) -> void:
-	if Input.is_action_just_pressed("E"):
-		Global.startDialogue([
-			"* This is a textbox."
-		])
+func _process(_delta) -> void:
+	$Label.text = "(" + str(velocity.x) + ", " + str(roundi(velocity.y)) + ")"
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -25,14 +23,15 @@ func _physics_process(delta: float) -> void:
 			velocity.y = JUMP_VELOCITY * 1.2
 	if Input.is_action_just_pressed("S"):
 		velocity.y = -JUMP_VELOCITY * 7
+		# TODO: Better fastfall maybe?
 			
-	var direction := Input.get_axis("A", "D")
+	var direction : float = Input.get_axis("A", "D")
 	if direction == -1: $Sprite.flip_h = true
 	elif direction == 1: $Sprite.flip_h = false
 	
 	if direction:
-		velocity.x = direction * SPEED
+		velocity.x = direction * MAXSPEED
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, ACCELERATION)
 
 	move_and_slide()
