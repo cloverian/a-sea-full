@@ -9,12 +9,12 @@
 [node name="Map" parent="." instance=ExtResource("1_bl13t")]
 
 [node name="Player" parent="." instance=ExtResource("2_iyx0m")]
-position = Vector2(215, 350)
+position = Vector2(341, 258)
 scale = Vector2(0.5, 0.5)
 
 [node name="WorldCamera" type="Camera2D" parent="."]
 limit_left = 0
-limit_top = 0
+limit_top = -480
 limit_right = 2560
 limit_bottom = 960
 limit_smoothed = true

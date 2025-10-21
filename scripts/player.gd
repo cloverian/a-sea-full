@@ -8,10 +8,14 @@ var turn : bool = false # R -> left, F -> right
 var jumps : int = 0
 var direction : float = 0.0
 
+func _ready() -> void:
+	$Sprite.play("idle")
+
 func _process(_delta) -> void:
 	if Input.is_action_just_pressed("E"):
-		position = Vector2(215, 350)
+		position = Vector2(341, 258)
 		velocity.x = 0
+		velocity.y = 0
 	$Label.text = "(" + str(velocity.x) + ", " + str(roundi(velocity.y)) + ")\n" + str(direction)
 
 func _physics_process(delta: float) -> void:

@@ -1,113 +1,95 @@
 [gd_scene load_steps=8 format=3 uid="uid://dae3gh4jw6a4a"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hrmi8"]
-bg_color = Color(2.695322e-06, 0.7510427, 0.9769704, 0.19607843)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4xfga"]
-bg_color = Color(1, 1, 1, 1)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hrmi8"]
-size = Vector2(2560, 63)
+[ext_resource type="Texture2D" uid="uid://c10cjw0ooc8hb" path="res://assets/BackgroundTest1.png" id="1_4xfga"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xfga"]
-size = Vector2(384, 48)
+size = Vector2(1593.5, 163.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_paxxb"]
-size = Vector2(384, 48)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_paxxb"]
-bg_color = Color(1, 1, 1, 1)
+size = Vector2(967.0351, 159.23354)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gldc4"]
-size = Vector2(50, 492)
+size = Vector2(285.81207, 382.2499)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0cso3"]
+size = Vector2(123.3161, 204.9638)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2klcf"]
+size = Vector2(113, 360.0978)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2lpho"]
+size = Vector2(48.183105, 20.841085)
 
 [node name="Map" type="Node2D"]
 
-[node name="Bounds" type="Panel" parent="."]
-offset_top = -480.0
-offset_right = 2560.0
-offset_bottom = 480.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_hrmi8")
-
-[node name="Floor" type="StaticBody2D" parent="."]
-
-[node name="Object" type="Panel" parent="Floor"]
-offset_top = 416.0
-offset_right = 2560.0
-offset_bottom = 480.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_4xfga")
-
-[node name="Hitbox" type="CollisionShape2D" parent="Floor"]
-position = Vector2(1280, 447.5)
-shape = SubResource("RectangleShape2D_hrmi8")
-
-[node name="Obstacle" type="StaticBody2D" parent="."]
-
-[node name="Panel2" type="Panel" parent="Obstacle"]
-offset_left = 512.0
-offset_top = 304.0
-offset_right = 896.0
-offset_bottom = 352.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_4xfga")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle"]
-position = Vector2(704, 328)
-shape = SubResource("RectangleShape2D_4xfga")
-
-[node name="Obstacle2" type="StaticBody2D" parent="."]
-
-[node name="Panel2" type="Panel" parent="Obstacle2"]
-offset_left = 888.0
-offset_top = 216.0
-offset_right = 1272.0
-offset_bottom = 264.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_4xfga")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle2"]
-position = Vector2(1080, 240)
-shape = SubResource("RectangleShape2D_paxxb")
-
-[node name="Obstacle3" type="StaticBody2D" parent="."]
-position = Vector2(-480, -78)
-
-[node name="Panel2" type="Panel" parent="Obstacle3"]
-offset_left = 888.0
-offset_top = 216.0
-offset_right = 1272.0
-offset_bottom = 264.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_4xfga")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle3"]
-position = Vector2(1080, 240)
-shape = SubResource("RectangleShape2D_paxxb")
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(1280, 0)
+texture = ExtResource("1_4xfga")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 93.0
-offset_top = 281.0
-offset_right = 404.0
-offset_bottom = 326.0
+offset_left = 209.0
+offset_top = 189.0
+offset_right = 520.0
+offset_bottom = 234.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 text = "Press [E] to reset here!!"
 
-[node name="Wall" type="StaticBody2D" parent="."]
+[node name="Floor" type="StaticBody2D" parent="."]
 
-[node name="Panel" type="Panel" parent="Wall"]
-offset_right = 40.0
-offset_bottom = 480.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_paxxb")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(794.25, 403.75)
+shape = SubResource("RectangleShape2D_4xfga")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
-position = Vector2(15, 236)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Floor"]
+position = Vector2(2068.695, 431.2505)
+rotation = 0.06163947
+shape = SubResource("RectangleShape2D_paxxb")
+
+[node name="Walls" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls"]
+position = Vector2(0.35625076, 0.8712158)
+scale = Vector2(1.0057367, 1.0025922)
+polygon = PackedVector2Array(0, -271, 207, -71, 1, -54)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls"]
+position = Vector2(2461.2422, 221.92361)
+rotation = 0.25424165
 shape = SubResource("RectangleShape2D_gldc4")
 
-[node name="Wall2" type="StaticBody2D" parent="."]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls"]
+position = Vector2(2489.6985, 15.661964)
+rotation = 1.1520663
+shape = SubResource("RectangleShape2D_0cso3")
 
-[node name="Panel" type="Panel" parent="Wall2"]
-offset_left = 2522.0
-offset_right = 2562.0
-offset_bottom = 480.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_paxxb")
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls"]
+position = Vector2(18, 155.00002)
+rotation = -0.14820424
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_2klcf")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2"]
-position = Vector2(2540, 240)
-shape = SubResource("RectangleShape2D_gldc4")
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Walls"]
+position = Vector2(22.924385, -23.201189)
+rotation = 0.015755674
+shape = SubResource("RectangleShape2D_2lpho")
+
+[node name="Obstacles" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Obstacles"]
+polygon = PackedVector2Array(583, -229, 773, -250, 791, -148, 657, -135)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Obstacles"]
+polygon = PackedVector2Array(923, -99, 924, -84, 984, -85, 1051, -53, 1094, -44, 1140, -29, 1139, -95, 981, -118)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Obstacles"]
+polygon = PackedVector2Array(880, 24, 876, 70, 967, 73, 1117, 179, 1175, 132, 1024, 32)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Obstacles"]
+polygon = PackedVector2Array(933, -306, 966, -232, 1026, -192, 1221, -198, 1330, -259, 1328, -294, 1238, -319, 1237, -363, 1218, -362, 1190, -322)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Obstacles"]
+polygon = PackedVector2Array(1111, -436, 1140, -433, 1101, -388)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Obstacles"]
+polygon = PackedVector2Array(1188, -479, 1244, -451, 1252, -479)

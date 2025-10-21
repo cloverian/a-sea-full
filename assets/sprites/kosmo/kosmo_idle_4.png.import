@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckllavq68y5fm"
-path="res://.godot/imported/kosmo.png-49f8c902a55fb6218bba521d23bb03ba.ctex"
+uid="uid://rc11te8sorrm"
+path="res://.godot/imported/kosmo_idle_4.png-2e5a25a50d6ca912fdd0390d8a091cd6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/kosmo.png"
-dest_files=["res://.godot/imported/kosmo.png-49f8c902a55fb6218bba521d23bb03ba.ctex"]
+source_file="res://assets/sprites/kosmo/kosmo_idle_4.png"
+dest_files=["res://.godot/imported/kosmo_idle_4.png-2e5a25a50d6ca912fdd0390d8a091cd6.ctex"]
 
 [params]
 
