@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dae3gh4jw6a4a"]
+[gd_scene load_steps=8 format=3 uid="uid://dae3gh4jw6a4a"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hrmi8"]
 bg_color = Color(2.695322e-06, 0.7510427, 0.9769704, 0.19607843)
@@ -14,6 +14,12 @@ size = Vector2(384, 48)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_paxxb"]
 size = Vector2(384, 48)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_paxxb"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gldc4"]
+size = Vector2(50, 492)
 
 [node name="Map" type="Node2D"]
 
@@ -82,3 +88,26 @@ offset_right = 404.0
 offset_bottom = 326.0
 theme_override_font_sizes/font_size = 24
 text = "Press [E] to reset here!!"
+
+[node name="Wall" type="StaticBody2D" parent="."]
+
+[node name="Panel" type="Panel" parent="Wall"]
+offset_right = 40.0
+offset_bottom = 480.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_paxxb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
+position = Vector2(15, 236)
+shape = SubResource("RectangleShape2D_gldc4")
+
+[node name="Wall2" type="StaticBody2D" parent="."]
+
+[node name="Panel" type="Panel" parent="Wall2"]
+offset_left = 2522.0
+offset_right = 2562.0
+offset_bottom = 480.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_paxxb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2"]
+position = Vector2(2540, 240)
+shape = SubResource("RectangleShape2D_gldc4")
