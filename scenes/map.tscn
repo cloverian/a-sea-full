@@ -35,9 +35,6 @@ polygon = PackedVector2Array(583, -229, 773, -250, 791, -148, 657, -135)
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Obstacles"]
 polygon = PackedVector2Array(923, -99, 924, -84, 984, -85, 1051, -53, 1094, -44, 1140, -29, 1139, -95, 981, -118)
 
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Obstacles"]
-polygon = PackedVector2Array(880, 24, 876, 70, 967, 73, 1117, 179, 1175, 132, 1024, 32)
-
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Obstacles"]
 polygon = PackedVector2Array(933, -306, 966, -232, 1026, -192, 1221, -198, 1330, -259, 1328, -294, 1238, -319, 1237, -363, 1218, -362, 1190, -322)
 
@@ -46,6 +43,9 @@ polygon = PackedVector2Array(1111, -436, 1140, -433, 1101, -388)
 
 [node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Obstacles"]
 polygon = PackedVector2Array(1188, -479, 1244, -451, 1252, -479)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Obstacles"]
+polygon = PackedVector2Array(873, 27, 877, 69, 965, 71, 1116, 184, 1256, 182, 1256, 143, 1177, 135, 1111, 85, 1078, 76, 1031, 34)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 offset_left = 151.0

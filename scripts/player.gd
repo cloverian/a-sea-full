@@ -9,7 +9,7 @@ var jumps : int = 0
 var direction : float = 0.0
 
 func _ready() -> void:
-	$Sprite.play("idle")
+	pass
 
 func _process(_delta) -> void:
 	if Input.is_action_just_pressed("E"):
@@ -31,17 +31,18 @@ func _physics_process(delta: float) -> void:
 			jumps = 2
 			velocity.y = JUMP_VELOCITY * 1.2
 	if Input.is_action_just_pressed("S"):
-		velocity.y = -JUMP_VELOCITY * 7
-		# TODO: Better fastfall maybe?
+		velocity.y = -JUMP_VELOCITY * 4
 			
 	direction = Input.get_axis("A", "D")
 	if direction:
-		turn = not Global.isNegative(direction)
-	$Sprite.flip_h = turn
+		$Sprite.flip_h = not Global.isNegative(direction)
 	
 	if direction:
+		$Sprite.play("idle")
 		velocity.x += (direction * ACCELERATION) if abs(velocity.x) < MAXSPEED else 0.0
 	else:
+		$Sprite.frame = 0
+		$Sprite.stop()
 		velocity.x = move_toward(velocity.x, 0, ACCELERATION)
 
 	move_and_slide()
