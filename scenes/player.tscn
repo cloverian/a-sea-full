@@ -52,10 +52,8 @@ script = ExtResource("1_g2els")
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_onrkg")
 animation = &"idle"
-frame_progress = 0.6144236
 
 [node name="GeneralCollision" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(-6, 18)
 shape = SubResource("RectangleShape2D_i3pqv")
 
