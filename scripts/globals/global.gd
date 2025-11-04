@@ -1,6 +1,7 @@
 extends Node
 
 var isGameFullScreen : bool = false
+var textSpeed : int = 30
 
 func _ready() -> void:
 	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
