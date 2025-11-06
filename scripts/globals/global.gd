@@ -19,6 +19,15 @@ func _process(_delta) -> void:
 	if Input.is_action_just_pressed("ESC"):
 		get_tree().quit(0)
 		
+func changeRoom(scene: String) -> void:
+	var trans := get_parent().get_node("Test/FadeTrans")
+	trans.modulate.a = 0
+	tween(trans, "modulate", Color(1, 1, 1, 1), 0.2)
+	await wait(0.2)
+	get_tree().change_scene_to_file(scene)
+	tween(trans, "modulate", Color(1, 1, 1, 0), 0.2)
+	await wait(0.2)
+
 func hasPlayedGameBefore() -> bool:
 	return FileAccess.file_exists("user://save.sav")
 

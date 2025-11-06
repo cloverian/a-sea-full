@@ -1,15 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://c5nftd4b3oqqj"]
+[gd_scene load_steps=7 format=3 uid="uid://c5nftd4b3oqqj"]
 
 [ext_resource type="PackedScene" uid="uid://dae3gh4jw6a4a" path="res://scenes/map.tscn" id="1_bl13t"]
 [ext_resource type="Script" uid="uid://b3732bylp7uyu" path="res://scripts/world_camera.gd" id="1_iyx0m"]
+[ext_resource type="Script" uid="uid://cgoli04fu4yud" path="res://scenes/test.gd" id="1_j5jx5"]
 [ext_resource type="PackedScene" uid="uid://dqco260pm24ey" path="res://scenes/player.tscn" id="2_iyx0m"]
+[ext_resource type="Texture2D" uid="uid://dm21bdx646g5e" path="res://assets/icon.svg" id="4_74lek"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_74lek"]
+size = Vector2(71, 16)
 
 [node name="Test" type="Node2D"]
+script = ExtResource("1_j5jx5")
 
 [node name="Map" parent="." instance=ExtResource("1_bl13t")]
 
 [node name="Player" parent="." instance=ExtResource("2_iyx0m")]
-position = Vector2(341, 258)
+position = Vector2(342, 240)
 scale = Vector2(0.5, 0.5)
 
 [node name="WorldCamera" type="Camera2D" parent="."]
@@ -21,3 +27,17 @@ limit_smoothed = true
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 script = ExtResource("1_iyx0m")
+
+[node name="RoomTrans" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomTrans"]
+position = Vector2(1155.5, -496)
+shape = SubResource("RectangleShape2D_74lek")
+
+[node name="FadeTrans" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1341, 74)
+scale = Vector2(21.82031, 9.73828)
+texture = ExtResource("4_74lek")
+
+[connection signal="body_entered" from="RoomTrans" to="." method="_on_room_trans_body_entered"]

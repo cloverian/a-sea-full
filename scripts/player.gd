@@ -17,6 +17,7 @@ func _process(_delta) -> void:
 		velocity.x = 0
 		velocity.y = 0
 	$Label.text = "(" + str(velocity.x) + ", " + str(roundi(velocity.y)) + ")\n" + str(direction)
+	
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():

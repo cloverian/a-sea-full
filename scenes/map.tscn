@@ -14,6 +14,12 @@ texture = ExtResource("1_4xfga")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor"]
 polygon = PackedVector2Array(0, 320, 0, 480, 2272, 480, 2280, 368, 1584, 328)
 
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Floor"]
+polygon = PackedVector2Array(1122, -479, 1123, -488, 1, -491, 0, -481)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Floor"]
+polygon = PackedVector2Array(1189, -480, 1189, -488, 2561, -491, 2561, -480)
+
 [node name="Walls" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls"]
@@ -27,6 +33,12 @@ polygon = PackedVector2Array(104, 320, 48, -32, 0, -40, 0, 320)
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Walls"]
 polygon = PackedVector2Array(2272, 368, 2372, 0, 2560, -84, 2560, 392)
 
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Walls"]
+polygon = PackedVector2Array(1093, -389, 1101, -387, 1101, -387, 1122, -479, 1114, -480, 1093, -389)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Walls"]
+polygon = PackedVector2Array(1239, -451, 1235, -364, 1244, -357, 1245, -451)
+
 [node name="Obstacles" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Obstacles"]
@@ -36,13 +48,13 @@ polygon = PackedVector2Array(583, -229, 773, -250, 791, -148, 657, -135)
 polygon = PackedVector2Array(923, -99, 924, -84, 984, -85, 1051, -53, 1094, -44, 1140, -29, 1139, -95, 981, -118)
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Obstacles"]
-polygon = PackedVector2Array(933, -306, 966, -232, 1026, -192, 1221, -198, 1330, -259, 1328, -294, 1238, -319, 1237, -363, 1218, -362, 1190, -322)
+polygon = PackedVector2Array(933, -306, 966, -232, 1026, -192, 1221, -198, 1330, -259, 1328, -294, 1238, -319, 1237, -363, 1218, -362, 1209, -342, 1188, -333, 1190, -322)
 
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Obstacles"]
-polygon = PackedVector2Array(1111, -436, 1140, -433, 1101, -388)
+polygon = PackedVector2Array(1111, -436, 1140, -433, 1128, -410, 1101, -388)
 
 [node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Obstacles"]
-polygon = PackedVector2Array(1188, -479, 1244, -451, 1252, -479)
+polygon = PackedVector2Array(1189, -480, 1202, -463, 1244, -451, 1250, -479)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Obstacles"]
 polygon = PackedVector2Array(873, 27, 877, 69, 965, 71, 1116, 184, 1256, 182, 1256, 143, 1177, 135, 1111, 85, 1078, 76, 1031, 34)
